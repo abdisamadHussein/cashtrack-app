@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:cashtrack/cah.dart';
 import 'package:cashtrack/utils.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:path_provider/path_provider.dart';
@@ -34,7 +35,8 @@ class PDFGenerator {
 
     final appDocDir = await getApplicationDocumentsDirectory();
 
-    final pdfPath = "${appDocDir.path}/invoice.pdf";
+    final pdfPath =
+        "${appDocDir.path}/'cash-${DateFormat('y-M-d').format(DateTime.now())}.pdf";
 
     final file = File(pdfPath);
     await file.writeAsBytes(await pdf.save());
