@@ -3,13 +3,9 @@ import 'package:cashtrack/cah.dart';
 import 'package:cashtrack/cashcontroller.dart';
 import 'package:cashtrack/pdf_report.dart';
 import 'package:cashtrack/utils.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -32,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF7F8FB),
+      backgroundColor: const Color.fromRGBO(247, 248, 251, 1),
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
